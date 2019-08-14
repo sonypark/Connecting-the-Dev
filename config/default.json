@@ -1,3 +1,4 @@
 {
-  "mongoURI": "mongodb+srv://sony123:sony123@devconnector-swjib.mongodb.net/test?retryWrites=true&w=majority"
+  "mongoURI": "mongodb+srv://sony123:sony123@devconnector-swjib.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "jsonwebtokensecret"
 }
