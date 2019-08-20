@@ -11,15 +11,16 @@ const config = require('config');
 // @desc    Get  current user profile
 // @access  Private
 
+// 프로필 전송
 router.get('/me', auth, async (req, res) => {
     try {
-        console.log(req);
         const profile = await Profile.findOne({user: req.user.id}).populate('user', ['name', 'avatar']);
 
         if (!profile) {
             return res.status(400).json({msg: 'There is no profile for this user'})
         }
-        res.json(profile)
+
+        res.json(profile);
     } catch (err) {
         console.error(err.message);
         res.status(500).send('Server Error');
