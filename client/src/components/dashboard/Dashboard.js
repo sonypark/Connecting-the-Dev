@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {getCurrentUserProfile} from '../../actions/profile'
 import Spinner from '../layout/Spinner';
+import DashboardActions from './DashboardActions';
 
 const Dashboard = ({getCurrentUserProfile, auth: {user}, profile: {profile, loading}}) => {
     useEffect(() => {
@@ -17,11 +18,14 @@ const Dashboard = ({getCurrentUserProfile, auth: {user}, profile: {profile, load
             <p className="lead">
                 <i className="fas fas-user"> Welcome {user && user.name} </i>
             </p>
-            {profile !==null ? (<Fragment>has profile</Fragment>) :
+            {profile !== null ? (
+                    <Fragment>
+                        <DashboardActions/>
+                    </Fragment>) :
                 (<Fragment>
-                    <p> 등록된 프로필이 없습니다. 프로필 정보를 추가해주세요  </p>
+                    <p> 등록된 프로필이 없습니다. 프로필 정보를 추가해주세요 </p>
                     <Link to='/create-profile' className='btn btn-primary my-1'>
-                    Create Profile
+                        Create Profile
                     </Link>
 
                 </Fragment>)}
