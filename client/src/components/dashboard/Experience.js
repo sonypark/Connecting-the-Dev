@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Moment from 'react-moment';
 import {connect} from 'react-redux';
 import {deleteExperience} from "../../actions/profile";
-import {deleteEducation} from "../../actions/profile";
 
 const Experience = ({experience, deleteExperience}) => {
 

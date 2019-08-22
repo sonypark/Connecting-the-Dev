@@ -9,8 +9,9 @@ const Navbar = ({auth: {isAuthenticated, loading}, logout}) => {
     // 로그인 한 유저
     const authLinks = (
         <ul>
+            <li><Link to='/profiles'>Developers</Link></li>
             <li>
-                <Link to="dashboard">
+                <Link to="/dashboard">
                     <i className="fas fa-user"></i>{' '}
                     <span className="hide-sm">Dashboard</span>
                 </Link>
@@ -29,9 +30,9 @@ const Navbar = ({auth: {isAuthenticated, loading}, logout}) => {
     // 로그인 하지 않은 유저
     const guestLinks = (
         <ul>
-            <li><Link to="#!">Developers</Link></li>
-            <li><Link to="register">Register</Link></li>
-            <li><Link to="login">Login</Link></li>
+            <li><Link to='/profiles'>Developers</Link></li>
+            <li><Link to="/register">Register</Link></li>
+            <li><Link to="/login">Login</Link></li>
         </ul>
     );
 

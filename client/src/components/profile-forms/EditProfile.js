@@ -40,7 +40,7 @@ const EditProfile = ({profile: {profile,loading}, createProfile, getCurrentUserP
             youtube: loading || !profile.social.youtube ? '' : profile.social.youtube,
             instagram: loading || !profile.social.instagram ? '' : profile.social.instagram,
         })
-    }, [loading]); // loading 되었을 때만 실행
+    }, [loading, getCurrentUserProfile]); // loading 되었을 때만 실행
 
 
     const {

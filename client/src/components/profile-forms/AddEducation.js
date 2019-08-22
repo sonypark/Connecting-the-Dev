@@ -1,6 +1,7 @@
 import React, {Fragment, useState} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
+import {withRouter} from 'react-router-dom';
 import {addEducation} from "../../actions/profile";
 
 const AddEducation = ({ addEducation, history}) => {
@@ -65,6 +66,7 @@ const AddEducation = ({ addEducation, history}) => {
               cols="30"
               rows="5"
               placeholder="Program Description"
+              value={description} onChange={e => onChange(e)}
           ></textarea>
                 </div>
                 <input type="submit" className="btn btn-primary my-1"/>
@@ -75,8 +77,8 @@ const AddEducation = ({ addEducation, history}) => {
 };
 
 AddEducation.propTypes = {
-    addExperience: PropTypes.func.isRequired,
+    addEducation: PropTypes.func.isRequired,
 };
 
-export default connect(null, {addEducation})(AddEducation);
+export default connect(null, {addEducation})(withRouter(AddEducation));
 
