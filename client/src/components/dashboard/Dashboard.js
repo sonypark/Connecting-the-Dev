@@ -6,6 +6,7 @@ import {getCurrentUserProfile} from '../../actions/profile'
 import Spinner from '../layout/Spinner';
 import DashboardActions from './DashboardActions';
 import Experience from './Experience';
+import Education from './Education';
 
 const Dashboard = ({getCurrentUserProfile, auth: {user}, profile: {profile, loading}}) => {
     useEffect(() => {
@@ -23,6 +24,7 @@ const Dashboard = ({getCurrentUserProfile, auth: {user}, profile: {profile, load
                     <Fragment>
                         <DashboardActions/>
                         <Experience experience={profile.experience}/>
+                        <Education education={profile.education}/>
                     </Fragment>) :
                 (<Fragment>
                     <p> 등록된 프로필이 없습니다. 프로필 정보를 추가해주세요 </p>
