@@ -1,5 +1,6 @@
 import {
-    ADD_POST,
+    ADD_COMMENT,
+    ADD_POST, DELETE_COMMENT,
     DELETE_POST, GET_POST,
     GET_POSTS,
     POST_ERROR, UPDATE_LIKES
@@ -12,7 +13,7 @@ const initialState = {
     error: {}
 };
 
-export default (state = initialState, action) =>{
+export default (state = initialState, action) => {
     const {type, payload} = action;
 
     switch (type) {
@@ -51,6 +52,21 @@ export default (state = initialState, action) =>{
             return {
                 ...state,
                 posts: state.posts.map(post => post._id === payload.id ? {...post, likes: payload.likes} : post),
+                loading: false
+            };
+        case ADD_COMMENT:
+            return {
+                ...state,
+                post: {...state.post, comments: payload},
+                loading: false
+            };
+        case DELETE_COMMENT:
+            return {
+                ...state,
+                post: {
+                    ...state.post,
+                    comments: state.post.comments.filter(comment => comment._id !== payload)
+                },
                 loading: false
             };
         default:
