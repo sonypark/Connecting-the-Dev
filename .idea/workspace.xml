@@ -1,18 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e2892661-54de-4490-9ebf-5a18b4f7c64f" name="Default Changelist" comment="[refactor] Divide routes &#10;&#10;- routes 폴더 따로 생성&#10;- 404 페이지 만듦">
+    <list default="true" id="e2892661-54de-4490-9ebf-5a18b4f7c64f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/dashboard/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/layout/Landing.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/layout/Landing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/db.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middlewares/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -46,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/default.json">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+            <state relative-caret-position="46">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -91,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/db.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+            <state relative-caret-position="46">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -151,7 +141,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client/src/utils/setAuthToken.js" />
         <option value="$PROJECT_DIR$/client/src/components/auth/Register.js" />
         <option value="$PROJECT_DIR$/client/node_modules/react-router/esm/react-router.js" />
         <option value="$PROJECT_DIR$/client/src/components/route/PrivateRoute.js" />
@@ -202,6 +191,7 @@
         <option value="$PROJECT_DIR$/routes/api/auth.js" />
         <option value="$PROJECT_DIR$/routes/api/profile.js" />
         <option value="$PROJECT_DIR$/routes/api/users.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -225,16 +215,6 @@
             <path>
               <item name="express-sns" type="b2602c69:ProjectViewProjectNode" />
               <item name="express-sns" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="express-sns" type="b2602c69:ProjectViewProjectNode" />
-              <item name="express-sns" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="express-sns" type="b2602c69:ProjectViewProjectNode" />
-              <item name="express-sns" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="express-sns" type="b2602c69:ProjectViewProjectNode" />
@@ -307,7 +287,7 @@
       <workItem from="1566454661906" duration="15710000" />
       <workItem from="1566526259161" duration="19331000" />
       <workItem from="1566574102192" duration="2819000" />
-      <workItem from="1566621683156" duration="1581000" />
+      <workItem from="1566621683156" duration="1826000" />
     </task>
     <task id="LOCAL-00001" summary="[feat] Create Profile model">
       <created>1565934325815</created>
@@ -603,11 +583,32 @@
       <option name="project" value="LOCAL" />
       <updated>1566576225865</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="[refactor] Edit settings for heroku deployment&#10;&#10;- client 정적 파일 빌드 명령어 추가&#10;- .env 파일 생성&#10;  - MONGO_URI, GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET 보관">
+      <created>1566623383619</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1566623383619</updated>
+    </task>
+    <task id="LOCAL-00044" summary="[refactor] Edit settings for heroku deployment&#10;&#10;- client 정적 파일 빌드 명령어 추가&#10;- .env 파일 생성&#10;  - MONGO_URI, GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET 보관">
+      <created>1566623403410</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1566623403410</updated>
+    </task>
+    <task id="LOCAL-00045" summary="[doc] Add .env to .gitignore&#10;&#10;- .env 파일 .gitignore에 추가">
+      <created>1566623514957</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1566623514957</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109406000" />
+    <option name="totallyTimeSpent" value="109651000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -678,8 +679,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[feat] Alert action&#10;&#10;- Alert action 구현&#10;- 3초 뒤 자동으로 사라지도록 구현" />
-    <MESSAGE value="[feat] Login&#10;&#10;- 로그인 구현&#10;- 토큰 인증 된 경우 dashboard로 리다이렉트 시킴" />
     <MESSAGE value="[feat] Logout&#10;&#10;- 로그 아웃 기능 구현" />
     <MESSAGE value="[feat] Create PrivateRoute&#10;&#10;- 로그인을 강제하는 라우터&#10;- 로그인이 필요한 페이지에 접근하는 경우 로그인되어 있지 않은 사용자는 로그인 페이지로 리다이렉트 시킨다." />
     <MESSAGE value="[feat] Create profile reduce&#10;&#10;- 프로필 reducer 생성&#10;- 로그인한 유저 프로필 가져오는 기능 구현" />
@@ -703,16 +702,11 @@
     <MESSAGE value="[feat] Leave a comment on a post&#10;&#10;- 게시물에 댓글 달기" />
     <MESSAGE value="[feat] Delete comment on posts&#10;&#10;- 게시물 댓글 삭제" />
     <MESSAGE value="[refactor] Divide routes &#10;&#10;- routes 폴더 따로 생성&#10;- 404 페이지 만듦" />
-    <option name="LAST_COMMIT_MESSAGE" value="[refactor] Divide routes &#10;&#10;- routes 폴더 따로 생성&#10;- 404 페이지 만듦" />
+    <MESSAGE value="[refactor] Edit settings for heroku deployment&#10;&#10;- client 정적 파일 빌드 명령어 추가&#10;- .env 파일 생성&#10;  - MONGO_URI, GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET 보관" />
+    <MESSAGE value="[doc] Add .env to .gitignore&#10;&#10;- .env 파일 .gitignore에 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="[doc] Add .env to .gitignore&#10;&#10;- .env 파일 .gitignore에 추가" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/src/components/profile-forms/AddEducation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/profile/ProfileAbout.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="598">
@@ -1061,13 +1055,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/middlewares/auth.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
@@ -1096,6 +1083,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/db.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config/default.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -1103,10 +1097,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/db.js">
+    <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+        <state relative-caret-position="92">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
