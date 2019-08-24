@@ -13,7 +13,7 @@ const Dashboard = ({getCurrentUserProfile, deleteAccount, auth: {user}, profile:
         getCurrentUserProfile();
     }, [getCurrentUserProfile]);
 
-    // 로딩 중일 때 spinner 시
+    // 로딩 중일 때 spinner 표시
     return loading && profile === null ? <Spinner/> :
         <Fragment>
             <h1 className="large text-primary">Dashboard</h1>

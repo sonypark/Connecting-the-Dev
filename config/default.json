@@ -1,6 +1,0 @@
-{
-  "mongoURI": "mongodb+srv://sony123:sony123@devconnector-swjib.mongodb.net/test?retryWrites=true&w=majority",
-  "jwtSecret": "jsonwebtokensecret",
-  "githubClientId": "8bb4f24de1e99d934c2b",
-  "githubClientSecret": "7ed5a041b1c0c84b9b944a28653e48a232781dbc"
-}
