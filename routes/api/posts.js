@@ -182,7 +182,7 @@ router.post('/comments/:id', [auth, [
         post.comments.unshift(comment);
         await post.save();
 
-        res.json(post);
+        res.json(post.comments);
 
     } catch (err) {
         console.error(err.message);
@@ -222,7 +222,7 @@ router.delete('/comments/:post_id/:comment_id', auth, async (req, res) => {
 
         post.comments.splice(removeIndex, 1);
         await post.save();
-        res.json(post);
+        res.json(post.comments);
 
     } catch (err) {
         console.error(err.message);

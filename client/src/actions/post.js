@@ -5,7 +5,7 @@ import {
     ADD_POST,
     DELETE_POST, GET_POST,
     GET_POSTS,
-    POST_ERROR, PROFILE_ERROR, DELETE_COMMENT, UPDATE_LIKES
+    POST_ERROR, DELETE_COMMENT, UPDATE_LIKES
 } from "./types";
 
 // GET posts
@@ -18,7 +18,7 @@ export const getPosts = () => async dispatch => {
             payload: res.data
         })
 
-    }catch (err) {
+    } catch (err) {
         dispatch({
             type: POST_ERROR,
             payload: {msg: err.response.statusText, status: err.response.status}
@@ -36,7 +36,7 @@ export const getPost = id => async dispatch => {
             payload: res.data
         })
 
-    }catch (err) {
+    } catch (err) {
         dispatch({
             type: POST_ERROR,
             payload: {msg: err.response.statusText, status: err.response.status}
@@ -48,7 +48,6 @@ export const getPost = id => async dispatch => {
 export const deletePost = id => async dispatch => {
     try {
         await axios.delete(`/api/posts/${id}`);
-
         dispatch({
             type: DELETE_POST,
             payload: {id}
@@ -56,7 +55,8 @@ export const deletePost = id => async dispatch => {
 
         dispatch(setAlert('Post Removed', 'success'));
 
-    }catch (err) {
+
+    } catch (err) {
         dispatch({
             type: POST_ERROR,
             payload: {msg: err.response.statusText, status: err.response.status}
@@ -74,7 +74,6 @@ export const addPost = formData => async dispatch => {
 
     try {
         const res = await axios.post(`/api/posts`, formData, config);
-
         dispatch({
             type: ADD_POST,
             payload: res.data
@@ -82,7 +81,7 @@ export const addPost = formData => async dispatch => {
 
         dispatch(setAlert('Post Created', 'success'));
 
-    }catch (err) {
+    } catch (err) {
         dispatch({
             type: POST_ERROR,
             payload: {msg: err.response.statusText, status: err.response.status}
@@ -101,7 +100,7 @@ export const addLike = id => async dispatch => {
             payload: {id, likes: res.data}
         })
 
-    }catch (err) {
+    } catch (err) {
         dispatch({
             type: POST_ERROR,
             payload: {msg: err.response.statusText, status: err.response.status}
@@ -119,7 +118,7 @@ export const removeLike = id => async dispatch => {
             payload: {id, likes: res.data}
         })
 
-    }catch (err) {
+    } catch (err) {
         dispatch({
             type: POST_ERROR,
             payload: {msg: err.response.statusText, status: err.response.status}
@@ -146,10 +145,12 @@ export const addComment = (postId, formData) => async dispatch => {
 
         dispatch(setAlert('Comment Added', 'success'));
 
-    }catch (err) {
+
+    } catch (err) {
+        console.log(err);
         dispatch({
             type: POST_ERROR,
-            payload: {msg: err.response.statusText, status: err.response.status}
+            payload: {msg: err, status: err}
         })
     }
 };
@@ -159,7 +160,6 @@ export const deleteComment = (postId, commentId) => async dispatch => {
 
     try {
         await axios.delete(`/api/posts/comments/${postId}/${commentId}`);
-
         dispatch({
             type: DELETE_COMMENT,
             payload: commentId
@@ -167,7 +167,8 @@ export const deleteComment = (postId, commentId) => async dispatch => {
 
         dispatch(setAlert('Comment Deleted', 'success'));
 
-    }catch (err) {
+
+    } catch (err) {
         dispatch({
             type: POST_ERROR,
             payload: {msg: err.response.statusText, status: err.response.status}

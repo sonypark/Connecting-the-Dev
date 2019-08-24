@@ -6,14 +6,17 @@ import {getPost} from "../../actions/post";
 import PostItem from '../posts/PostItem';
 import {Link} from "react-router-dom";
 import CommentForm from './CommentForm';
+// import CommentItem from './CommentItem'
 import CommentItem from './CommentItem'
 
-const Post = ({getPost, post: {post, loading}, match }) => {
-    useEffect(()=>{
+const Post = ({getPost, post: {post, loading}, match}) => {
+    useEffect(() => {
         getPost(match.params.id)
     }, [getPost]);
 
-    return ( loading || post === null ? <Spinner/> : <Fragment>
+    console.log(post);
+
+    return (loading || post === null ? <Spinner/> : <Fragment>
             <Link to='/posts' className='btn'>
                 Back to the Post List
             </Link>
@@ -37,4 +40,4 @@ const mapStateToProps = state => ({
     post: state.post
 });
 
-export default connect(mapStateToProps, {getPost})(Post) ;
+export default connect(mapStateToProps, {getPost})(Post);
