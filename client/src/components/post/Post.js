@@ -14,8 +14,6 @@ const Post = ({getPost, post: {post, loading}, match}) => {
         getPost(match.params.id)
     }, [getPost]);
 
-    console.log(post);
-
     return (loading || post === null ? <Spinner/> : <Fragment>
             <Link to='/posts' className='btn'>
                 Back to the Post List

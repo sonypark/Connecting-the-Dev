@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e2892661-54de-4490-9ebf-5a18b4f7c64f" name="Default Changelist" comment="">
+    <list default="true" id="e2892661-54de-4490-9ebf-5a18b4f7c64f" name="Default Changelist" comment="[fix] &#10;&#10;- 댓글을 입력하면 DB에는 저장되는데 화면에는 표시 안 되며 에러가 발생했다.&#10;- 프론트쪽은 아무리 봐도 문제가 없었다&#10;- 알고보니 백엔드에서 데이터를 보내줄 때 comments 배열만 보내줘야하는데 post 객체를 보내주고 있었다..&#10;- 그래서 프론트에서 comments 배열을 찾을 수 없다는 에러를 발생시켰다..&#10;- 백엔드에서 잘 못 보낸줄 모르고 계속 프론트 쪽에서만 문제를 찾아서 시간을 많이 허비했다. -- 무려 3시간.. -- 결국 디버깅을 잠시 미루고 다른 걸 하다 나중에 보니 문제가 쉽게 보였다..&#10;- 1시간 이상 에러를 찾지 못 하면 잠시 쉬고 나중에 해결하자. 그게 훨씬 디버깅 하기 쉽다.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/actions/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/actions/post.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/post/CommentItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/post/CommentItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/actions/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/actions/profile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/post/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/post/Post.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/reducers/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reducers/post.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/posts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/profile/ProfileTop.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/profile/ProfileTop.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,22 +23,34 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/reducers/post.js">
+        <entry file="file://$PROJECT_DIR$/client/src/components/profile/ProfileGithub.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="61" column="37" lean-forward="true" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
+            <state relative-caret-position="124">
+              <caret line="17" column="30" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="30" />
               <folding>
-                <element signature="e#0#153#0" expanded="true" />
+                <element signature="e#0#39#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client/src/actions/post.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/components/profile/Profile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="49" column="20" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
+            <state relative-caret-position="1069">
+              <caret line="55" column="26" lean-forward="true" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#49#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/components/profile/ProfileTop.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="321">
+              <caret line="48" column="24" lean-forward="true" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -48,10 +59,82 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/api/posts.js">
+        <entry file="file://$PROJECT_DIR$/client/src/components/profile/ProfileAbout.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="184" column="30" selection-start-line="184" selection-start-column="30" selection-end-line="184" selection-end-column="30" />
+            <state>
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/components/profile/ProfileEducation.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/components/profile-forms/AddEducation.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#48#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/components/profile-forms/EditProfile.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="483">
+              <caret line="36" column="19" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#59#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/src/components/profile-forms/CreateProfile.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="467">
+              <caret line="163" lean-forward="true" selection-start-line="163" selection-end-line="163" />
+              <folding>
+                <element signature="e#0#48#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/components/profiles/ProfileItem.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="492">
+              <caret line="22" column="23" lean-forward="true" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/components/profiles/Profiles.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="483">
+              <caret line="21" column="50" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="50" />
+              <folding>
+                <element signature="e#0#49#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -103,12 +186,9 @@
         <option value="$PROJECT_DIR$/client/src/components/profiles/ProfileItem.js" />
         <option value="$PROJECT_DIR$/client/src/components/profiles/Profiles.js" />
         <option value="$PROJECT_DIR$/client/src/components/profile-forms/EditProfile.js" />
-        <option value="$PROJECT_DIR$/client/src/actions/profile.js" />
         <option value="$PROJECT_DIR$/client/src/components/profile-forms/AddEducation.js" />
         <option value="$PROJECT_DIR$/client/src/components/profile-forms/AddExperience.js" />
-        <option value="$PROJECT_DIR$/client/src/components/profile/ProfileTop.js" />
         <option value="$PROJECT_DIR$/client/src/components/profile/ProfileAbout.js" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/client/src/components/profile/ProfileExperience.js" />
         <option value="$PROJECT_DIR$/client/src/components/profile/ProfileEducation.js" />
         <option value="$PROJECT_DIR$/client/src/components/profile/Profile.js" />
@@ -135,11 +215,14 @@
         <option value="$PROJECT_DIR$/config/db.js" />
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/client/src/App.js" />
-        <option value="$PROJECT_DIR$/client/src/components/post/Post.js" />
         <option value="$PROJECT_DIR$/client/src/components/post/CommentItem.js" />
-        <option value="$PROJECT_DIR$/client/src/actions/post.js" />
         <option value="$PROJECT_DIR$/routes/api/posts.js" />
         <option value="$PROJECT_DIR$/client/src/reducers/post.js" />
+        <option value="$PROJECT_DIR$/client/src/actions/post.js" />
+        <option value="$PROJECT_DIR$/client/src/components/post/Post.js" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/client/src/actions/profile.js" />
+        <option value="$PROJECT_DIR$/client/src/components/profile/ProfileTop.js" />
       </list>
     </option>
   </component>
@@ -156,6 +239,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -202,7 +286,15 @@
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="posts" type="462c0819:PsiDirectoryNode" />
+              <item name="profile" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="express-sns" type="b2602c69:ProjectViewProjectNode" />
+              <item name="express-sns" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="profile-forms" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="express-sns" type="b2602c69:ProjectViewProjectNode" />
@@ -247,7 +339,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -305,14 +396,8 @@
       <workItem from="1566526259161" duration="19331000" />
       <workItem from="1566574102192" duration="2819000" />
       <workItem from="1566621683156" duration="10439000" />
-      <workItem from="1566652630261" duration="3107000" />
-    </task>
-    <task id="LOCAL-00001" summary="[feat] Create Profile model">
-      <created>1565934325815</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1565934325815</updated>
+      <workItem from="1566652630261" duration="4896000" />
+      <workItem from="1566726075294" duration="3610000" />
     </task>
     <task id="LOCAL-00002" summary="[feat] Get all profile or a profile by userId">
       <created>1565952404164</created>
@@ -650,19 +735,26 @@
       <option name="project" value="LOCAL" />
       <updated>1566626471375</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="[fix] Fix bug on displaying a comment&#10;&#10;- 댓글을 입력하면 DB에는 저장되는데 화면에는 표시 안 되며 에러가 발생했다.&#10;- 프론트쪽은 아무리 봐도 문제가 없었다&#10;- 알고보니 백엔드에서 데이터를 보내줄 때 comments 배열만 보내줘야하는데 post 객체를 보내주고 있었다..&#10;- 그래서 프론트에서 comments 배열을 찾을 수 없다는 에러를 발생시켰다..&#10;- 백엔드에서 잘 못 보낸줄 모르고 계속 프론트 쪽에서만 문제를 찾아서 시간을 많이 허비했다. -- 무려 3시간.. -- 결국 디버깅을 잠시 미루고 다른 걸 하다 나중에 보니 문제가 쉽게 보였다..&#10;- 1시간 이상 에러를 찾지 못 하면 잠시 쉬고 나중에 해결하자. 그게 훨씬 디버깅 하기 쉽다.">
+      <created>1566656084530</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1566656084530</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121371000" />
+    <option name="totallyTimeSpent" value="126770000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.50455135" side_tool="true" weight="0.26862463" />
       <window_info id="npm" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49544865" visible="true" weight="0.21489972" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49544865" visible="true" weight="0.21776505" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.2652796" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
@@ -725,7 +817,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[feat] Create prifile component&#10;&#10;- 프로필 컴포넌트 생성" />
     <MESSAGE value="[feat] Create profile action&#10;&#10;- 프로필 action 구현&#10;- 프로필 정보를 입력하고 submit 버튼을 누르면 DB에 저장되는 것 까지 구현" />
     <MESSAGE value="[feat] Edit profile&#10;&#10;- 프로필 수정 기능 구현" />
     <MESSAGE value="[feat] Add experience in profile&#10;&#10;- 프로필에 experience 추가 기능 구현" />
@@ -750,52 +841,10 @@
     <MESSAGE value="[chore] Fix typo on scripts in package.json" />
     <MESSAGE value="[chore] Fix typo on .env and server.js&#10;&#10;- env 파일에 &quot;&quot; 제거&#10;- dotenv 모듈 import 할 때 config 함수도 같이 호출하도록 변경" />
     <MESSAGE value="[chore] Fix typo on .env and server.js&#10;&#10;- env 파일에 &quot;&quot; 제거&#10;- dotenv 모듈 import 할 때 config 함수도 같이 호출하도록 변경&#10;- 오타 수정 process.env.NODE_CONFIG =&gt; process.env.NODE_ENV&#10;  - 노드 환경이 production 일 때 client/build 에 있는 정적 파일 사용" />
-    <option name="LAST_COMMIT_MESSAGE" value="[chore] Fix typo on .env and server.js&#10;&#10;- env 파일에 &quot;&quot; 제거&#10;- dotenv 모듈 import 할 때 config 함수도 같이 호출하도록 변경&#10;- 오타 수정 process.env.NODE_CONFIG =&gt; process.env.NODE_ENV&#10;  - 노드 환경이 production 일 때 client/build 에 있는 정적 파일 사용" />
+    <MESSAGE value="[fix] Fix bug on displaying a comment&#10;&#10;- 댓글을 입력하면 DB에는 저장되는데 화면에는 표시 안 되며 에러가 발생했다.&#10;- 프론트쪽은 아무리 봐도 문제가 없었다&#10;- 알고보니 백엔드에서 데이터를 보내줄 때 comments 배열만 보내줘야하는데 post 객체를 보내주고 있었다..&#10;- 그래서 프론트에서 comments 배열을 찾을 수 없다는 에러를 발생시켰다..&#10;- 백엔드에서 잘 못 보낸줄 모르고 계속 프론트 쪽에서만 문제를 찾아서 시간을 많이 허비했다. -- 무려 3시간.. -- 결국 디버깅을 잠시 미루고 다른 걸 하다 나중에 보니 문제가 쉽게 보였다..&#10;- 1시간 이상 에러를 찾지 못 하면 잠시 쉬고 나중에 해결하자. 그게 훨씬 디버깅 하기 쉽다." />
+    <option name="LAST_COMMIT_MESSAGE" value="[fix] Fix bug on displaying a comment&#10;&#10;- 댓글을 입력하면 DB에는 저장되는데 화면에는 표시 안 되며 에러가 발생했다.&#10;- 프론트쪽은 아무리 봐도 문제가 없었다&#10;- 알고보니 백엔드에서 데이터를 보내줄 때 comments 배열만 보내줘야하는데 post 객체를 보내주고 있었다..&#10;- 그래서 프론트에서 comments 배열을 찾을 수 없다는 에러를 발생시켰다..&#10;- 백엔드에서 잘 못 보낸줄 모르고 계속 프론트 쪽에서만 문제를 찾아서 시간을 많이 허비했다. -- 무려 3시간.. -- 결국 디버깅을 잠시 미루고 다른 걸 하다 나중에 보니 문제가 쉽게 보였다..&#10;- 1시간 이상 에러를 찾지 못 하면 잠시 쉬고 나중에 해결하자. 그게 훨씬 디버깅 하기 쉽다." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/public/manifest.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/Post.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="25" column="6" lean-forward="true" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/Profile.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/User.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/reducers/auth.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/reducers/alert.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/auth/Login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="746">
-          <caret line="54" column="63" selection-start-line="54" selection-start-column="52" selection-end-line="54" selection-end-column="63" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/App.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -809,16 +858,6 @@
           <caret line="7" column="37" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="37" />
           <folding>
             <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/profile/Profile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1265">
-          <caret line="55" column="26" lean-forward="true" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -837,13 +876,6 @@
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/actions/auth.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="19" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -904,27 +936,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/auth.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/profile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/default.json" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
@@ -947,25 +958,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/profile/ProfileGithub.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="27" column="29" lean-forward="true" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/profile/ProfileTop.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/actions/types.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
@@ -979,20 +971,6 @@
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="24" column="6" lean-forward="true" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
@@ -1054,25 +1032,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/profiles/Profiles.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-372">
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/profiles/ProfileItem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/post/CommentItem.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="295">
@@ -1083,32 +1042,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/post/Post.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="29" column="19" lean-forward="true" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/post/CommentForm.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="501">
           <caret line="35" column="42" lean-forward="true" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/actions/profile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="685">
-          <caret line="244" column="5" lean-forward="true" selection-start-line="244" selection-start-column="5" selection-end-line="244" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1133,6 +1072,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/actions/post.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/reducers/post.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="61" column="37" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#153#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="184">
+            <caret line="8" selection-start-line="8" selection-end-line="8" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/actions/auth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="53" column="10" lean-forward="true" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/public/favicon.ico">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/api/posts.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="348">
@@ -1140,22 +1122,161 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/reducers/post.js">
+    <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="61" column="37" lean-forward="true" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
+        <state relative-caret-position="92">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/reducers/auth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-636">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/auth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1085">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/post/Post.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="685">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
           <folding>
-            <element signature="e#0#153#0" expanded="true" />
+            <element signature="e#0#49#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/actions/post.js">
+    <entry file="file://$PROJECT_DIR$/routes/api/profile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="49" column="20" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
+        <state relative-caret-position="495">
+          <caret line="308" column="36" selection-start-line="308" selection-start-column="32" selection-end-line="308" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/actions/profile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="73" column="28" lean-forward="true" selection-start-line="73" selection-start-column="28" selection-end-line="73" selection-end-column="28" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/profile/ProfileGithub.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="17" column="30" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/profile-forms/AddEducation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/profiles/Profiles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="21" column="50" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/profiles/ProfileItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="22" column="23" lean-forward="true" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/profile/ProfileAbout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/profile/ProfileEducation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/profile/ProfileTop.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="48" column="24" lean-forward="true" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/profile-forms/EditProfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="36" column="19" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/profile/Profile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1069">
+          <caret line="55" column="26" lean-forward="true" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/profile-forms/CreateProfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="163" lean-forward="true" selection-start-line="163" selection-end-line="163" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
           </folding>
         </state>
       </provider>
